@@ -1,4 +1,4 @@
-# ProxyCallLab
+# Swagger UI Relay Lab
 * Swagger UI + WebApi2應用練習。      
 * `前台`+`中台(中繼)`+`後台`  
 * 可利用Swagger UI工具組織WebApi2的中繼/proxy。
