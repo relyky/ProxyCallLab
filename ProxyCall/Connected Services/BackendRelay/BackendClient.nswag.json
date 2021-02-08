@@ -1,0 +1,227 @@
+﻿{
+  "x-generator": "NSwag v13.10.2.0 (NJsonSchema v10.3.4.0 (Newtonsoft.Json v12.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:52104"
+    }
+  ],
+  "paths": {
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "WeatherForecast_Get",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestForm/QueryForm": {
+      "post": {
+        "tags": [
+          "BackendSwag"
+        ],
+        "operationId": "_QueryForm",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FormInfo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestForm/LoadForm": {
+      "post": {
+        "tags": [
+          "BackendSwag"
+        ],
+        "operationId": "_LoadForm",
+        "parameters": [
+          {
+            "name": "formNo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestForm/SaveForm": {
+      "post": {
+        "tags": [
+          "BackendSwag"
+        ],
+        "operationId": "_SaveForm",
+        "requestBody": {
+          "x-name": "body",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormInfo"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestForm/LongTimeCalc": {
+      "post": {
+        "tags": [
+          "BackendSwag"
+        ],
+        "operationId": "_LongTimeCalc",
+        "parameters": [
+          {
+            "name": "spend",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrMsg"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "WeatherForecast": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "FormInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "formNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "anString": {
+            "type": "string",
+            "nullable": true
+          },
+          "anNumber": {
+            "type": "number",
+            "format": "double"
+          },
+          "anTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ErrMsg": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "errType": {
+            "type": "string",
+            "nullable": true
+          },
+          "errMsg1": {
+            "type": "string",
+            "nullable": true
+          },
+          "errClass": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "BackendSwag"
+    }
+  ]
+}

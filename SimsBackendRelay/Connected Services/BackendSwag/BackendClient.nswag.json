@@ -1,0 +1,221 @@
+﻿{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "SimsBackendApi",
+    "version": "v1"
+  },
+  "paths": {
+    "/TestForm/QueryForm": {
+      "post": {
+        "tags": [
+          "TestForm"
+        ],
+        "operationId": "QueryForm",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FormInfo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FormInfo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FormInfo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestForm/LoadForm": {
+      "post": {
+        "tags": [
+          "TestForm"
+        ],
+        "operationId": "LoadForm",
+        "parameters": [
+          {
+            "name": "formNo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestForm/SaveForm": {
+      "post": {
+        "tags": [
+          "TestForm"
+        ],
+        "operationId": "SaveForm",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormInfo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormInfo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FormInfo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TestForm/LongTimeCalc": {
+      "post": {
+        "tags": [
+          "TestForm"
+        ],
+        "operationId": "LongTimeCalc",
+        "parameters": [
+          {
+            "name": "spend",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrMsg"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrMsg"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrMsg"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "FormInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "formNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "anString": {
+            "type": "string",
+            "nullable": true
+          },
+          "anNumber": {
+            "type": "number",
+            "format": "double"
+          },
+          "anTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ErrMsg": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "errType": {
+            "type": "string",
+            "nullable": true
+          },
+          "errMsg": {
+            "type": "string",
+            "nullable": true
+          },
+          "errClass": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      }
+    }
+  }
+}

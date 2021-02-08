@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyCall", "ProxyCall\ProxyCall.csproj", "{4B5EA115-A394-4A18-989B-0A39A91C8D5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimsBackendApi", "SimsBackendApi\SimsBackendApi.csproj", "{EECB937F-CAA7-405C-A254-0ABEEDCF8F8E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimsBackendRelay", "SimsBackendRelay\SimsBackendRelay.csproj", "{12C808AB-C21B-4463-87B4-0C3C1BB2376C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B5EA115-A394-4A18-989B-0A39A91C8D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5EA115-A394-4A18-989B-0A39A91C8D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5EA115-A394-4A18-989B-0A39A91C8D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5EA115-A394-4A18-989B-0A39A91C8D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EECB937F-CAA7-405C-A254-0ABEEDCF8F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECB937F-CAA7-405C-A254-0ABEEDCF8F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECB937F-CAA7-405C-A254-0ABEEDCF8F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECB937F-CAA7-405C-A254-0ABEEDCF8F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C808AB-C21B-4463-87B4-0C3C1BB2376C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C808AB-C21B-4463-87B4-0C3C1BB2376C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C808AB-C21B-4463-87B4-0C3C1BB2376C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C808AB-C21B-4463-87B4-0C3C1BB2376C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9200E2FA-E9D0-4C01-B208-7DFDADEE259B}
+	EndGlobalSection
+EndGlobal
